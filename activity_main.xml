@@ -1,0 +1,175 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="10dp"
+    tools:context=".MainActivity">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Music Application"
+        android:textSize="30sp"
+        android:textColor="@color/black"
+
+      />
+
+
+    <!-- ช่องกรอกชื่อ -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp">
+        <TextView
+            android:layout_width="170dp"
+            android:layout_height="wrap_content"
+            android:textSize="18sp"
+            android:text="Name:"/>
+        <EditText
+            android:id="@+id/Name"
+            android:layout_width="200dp"
+            android:layout_height="wrap_content"
+            android:inputType="text"
+
+            android:textSize="18sp"/>
+    </LinearLayout>
+
+    <!--///////-->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        >
+        <TextView
+            android:layout_width="170dp"
+            android:layout_height="wrap_content"
+            android:textSize="18sp"
+            android:paddingTop="10dp"
+            android:text="OS:"/>
+
+        <!-- RadioButton -->
+        <RadioGroup
+            android:id="@+id/RadioGroup"
+            android:layout_width="200dp"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+            <RadioButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="ANDROID"/>
+            <RadioButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="iOS"/>
+        </RadioGroup>
+    </LinearLayout>
+
+    <!-- ทำ Dropdown -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:orientation="horizontal"
+        >
+        <TextView
+            android:layout_width="170dp"
+            android:layout_height="wrap_content"
+            android:textSize="18sp"
+            android:paddingTop="10dp"
+            android:text="Member Type:"/>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:layout_width="150dp"
+            android:layout_height="wrap_content"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.ExposedDropdownMenu"
+            >
+            <AutoCompleteTextView
+            android:id="@+id/type"
+                android:layout_width="150dp"
+                android:layout_height="match_parent"
+                android:inputType="none"
+                android:textSize="18sp"
+                android:text="Select"/>
+        </com.google.android.material.textfield.TextInputLayout>
+        <TextView
+            android:layout_width="40dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:textSize="18sp"
+            android:paddingTop="10dp"
+            android:text="Bath"/>
+
+    </LinearLayout>
+
+    <!-- ช่องกรอกวันที่ -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp">
+        <TextView
+            android:layout_width="170dp"
+            android:layout_height="wrap_content"
+            android:textSize="18sp"
+            android:text="Date:"/>
+        <EditText
+            android:id="@+id/Date"
+            android:layout_width="200dp"
+            android:layout_height="wrap_content"
+            android:inputType="date"
+            android:hint="dd/mm/yyyy"
+
+            android:textSize="18sp"/>
+    </LinearLayout>
+
+    <!-- ช่องกรอกจำนวนเดือน -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp">
+        <TextView
+            android:layout_width="170dp"
+            android:layout_height="wrap_content"
+            android:textSize="18sp"
+            android:text="Number of month:"/>
+        <EditText
+            android:id="@+id/Month"
+            android:layout_width="200dp"
+            android:layout_height="wrap_content"
+            android:inputType="number"
+            android:textSize="18sp"/>
+    </LinearLayout>
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        >
+
+        <!-- ปุ่ม Submit -->
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/btn_show"
+            android:layout_width="170dp"
+            android:layout_height="wrap_content"
+            android:onClick="SUBMIT"
+            android:padding="10dp"
+            android:text="submit"
+            android:background="#00FF00"
+            android:textAllCaps="true"
+            android:textSize="20sp" />
+
+        <!-- ปุ่ม Reset -->
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/btn_reset"
+            android:layout_width="170dp"
+            android:layout_height="wrap_content"
+            android:text="RESET"
+            android:textSize="20sp"
+            android:background="#FF0000"
+            android:layout_toRightOf="@id/btn_show"
+            android:textAllCaps="false"
+            android:layout_marginLeft="20dp"
+            android:onClick="RESET"/>
+    </RelativeLayout>
+</LinearLayout>
